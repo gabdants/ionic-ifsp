@@ -1,17 +1,31 @@
 <ion-header>
-  <ion-navbar color="dark">
+  <ion-navbar>
     <ion-title>
-      Member Area
+      Alyf App
     </ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="logout()">
-        <ion-icon name="log-out"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
- 
-<ion-content class="home" padding>
-  <h3>Welcome inside, {{username}}!</h3>
-  Your Email is: {{email}}
+
+<ion-content padding>
+  <div class="options-container">
+    <div class="row-options">
+      <div class="option-circle" (click)="chamaFreq(alunos)">
+        <img class="icon-options" src="../../assets/imgs/frenquencia-icon.png" />
+        <p>Frequencia</p>
+        
+      </div>
+
+      <div class="option-circle" (click)="chamaNotas(alunos)">
+        <img class="icon-options" src="../../assets/imgs/notas-icon.png" />
+        <p>Notas</p>
+      </div>
+    </div>
+
+    <div class="row-options" style="padding-top: 20px;" (click)="chamaMensagem()">
+      <div class="option-circle">
+        <img class="icon-options" src="../../assets/imgs/mensagens-icon.png" />
+        <p>Mensagens</p>
+      </div>
+    </div>
+  </div>
 </ion-content>

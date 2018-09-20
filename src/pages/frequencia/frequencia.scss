@@ -1,0 +1,32 @@
+page-frequencia .content-md {
+    background-image: url('../../assets/imgs/lds.png');
+    background-size: cover;
+}
+.freq-card {
+    width: 90%;
+    background: rgba(255, 255, 255, 0.9215686274509803);
+    margin: auto;
+    height: 70%;
+    border-radius: 25px;
+    margin-top: 15%;
+    padding: 20px;
+}
+p.freq-number {
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+}   
+.frequency-bar-gray{
+    width: 100%;
+    height: 15px;
+    background: #cccccc;
+    margin: auto;
+    border-radius: 25px;
+}
+.frequency-bar-aluno{
+    height: 15px;
+    background: #4CAF50;
+    margin: auto;
+    border-radius: 25px; 
+    float: left;
+}

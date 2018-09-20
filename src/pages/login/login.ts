@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { HomePage } from '../home/home';
+import { AlunosServiceProvider } from '../../providers/alunos-service/alunos-service';
  
 @IonicPage()
 @Component({
@@ -18,17 +20,18 @@ export class LoginPage {
   }
  
   public login() {
-    this.showLoading()
-    this.auth.login(this.registerCredentials).subscribe(allowed => {
-      if (allowed) {        
-        this.nav.setRoot('HomePage');
-      } else {
-        this.showError("Access Denied");
-      }
-    },
-      error => {
-        this.showError(error);
-      });
+    this.nav.push(HomePage);
+    // this.showLoading()
+    // this.auth.login(this.registerCredentials).subscribe(allowed => {
+    //   if (allowed) {        
+    //     this.nav.setRoot('HomePage');
+    //   } else {
+    //     this.showError("Access Denied");
+    //   }
+    // },
+    //   error => {
+    //     this.showError(error);
+    //   });
   }
  
   showLoading() {
